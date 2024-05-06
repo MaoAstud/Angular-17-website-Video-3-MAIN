@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of alanisbarba</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+          background-color: #ffffff;
+          font-family: 'Bebas Neue', cursive;
+          color: #fff;
+      }
+
+      .container{
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      .header {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url('../assets/images/0.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.nave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    color: #bea0d8;
+}
+
+/*.nave .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.nave .navbar ul ui a{
+    font-size: 22px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+.nave .navbar ul li a:hover{
+    color:#ff2f28;
+}
+
+#nave {
+    display: none;
+}
+
+.nave-icono{
+    width: 25px;
+}
+
+.nave label{
+    cursor: pointer;
+    display: none;
+}
+*/
+
+/*
+.nave .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.nave .navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: #7a7777;
+    display: block;
+}
+
+.nave .navbar ul li a:hover {
+    color: #9c2bcd;
+}
+*/
+.nave .navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+}
+
+.nave .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nave .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.nave .navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: #7a7777;
+    display: block;
+}
+
+.nave .navbar ul li a:hover {
+    color: #9c2bcd;
+}
+
+#nave {
+    display: none;
+}
+
+.nave-icono {
+    width: 25px;
+}
+
+.nave label {
+    cursor: pointer;
+    /* Corrige la propiedad para que el elemento sea visible */
+    display: inline-block;
+}
+
+.header-content{
+    display: flex;
+    width: 100%;
+}
+
+.header-1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-end;
+}
+
+.header-1 img{
+    width: 300px;
+}
+
+.header-2{
+    width: 50%;
+    margin-top: 80px;
+    text-align: end;
+}
+
+.header-2 h1{
+    color: #ffffff72;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.header-2 img{
+    width: 70px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #e398e9;
+    color: #fff;
+    font-size: 20px;
+}
+
+.btn-2{
+    width: 110px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #c87fd1;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.lives{
+    padding: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+hr{
+    border: 1px solid #c172e4;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+/*.box-container-1 ,
+.box-container-9{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-max(250px, 1fr));
+    gap: 40px;
+}
+
+.box-1 , 
+.box-9{
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}*/
+
+.box-container-1,
+.box-container-9 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.box-1,
+.box-9 {
+    border-radius: 5px;
+    z-index: 1000;
+    /* Ajusta el ancho de cada elemento para ocupar el espacio disponible */
+    flex: 1 0 250px;
+    /* Añade margen inferior para el espacio entre filas */
+    margin-bottom: 40px;
+}
+
+/*
+.box-1:nth-last-child(1),
+.box-1:nth-last-child(2),
+.box-1:nth-last-child(3),
+.box-1:nth-last-child(4){
+    display: inline-block;
+}
+.box-9:nth-last-child(1),
+.box-9:nth-last-child(2),
+.box-9:nth-last-child(3),
+.box-9:nth-last-child(4)
+{
+    display: inline-block;
+}
+*/
+
+.box-1:nth-child(1),
+.box-1:nth-child(2),
+.box-1:nth-child(3),
+.box-1:nth-child(4){
+    display: inline-block;
+}
+.box-9:nth-child(1),
+.box-9:nth-child(2),
+.box-9:nth-child(3),
+.box-9:nth-child(4)
+{
+    display: inline-block;
+}
+.load-more{
+    margin-top: 40px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid #cd28ff;
+    color: #c76fed;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.load-more:hover{
+    background-color: #a393ad;
+    color: #fff;
+}
+
+.content img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.content h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content{
+    color: #cfcfcf;
+    font-size: 20px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    margin-top: 100px;
+    border-top: 1px solid #b235c8;
+}
+
+.footer ul{
+    display: flex;
+}
+
+.footer h3{
+    font-size: 30px;
+}
+
+.footer a{
+    color: #8b8888;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+}
+
+.footer a:hover{
+    color: #d428ff;
+}
+
+@media(max-width:991px){
+    .nave{
+        padding: 20PX;
+    }
+    
+    .nave label{
+        display: initial;
+    }
+
+    .nave .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #030303;
+        display: none;
+    }
+    
+    .nave .navbar ul li{
+      width: 100%;
+    }
+    
+    .btn-1{
+      display: none;
+    }
+    
+    #nave:checked ~ .navbar{
+    display: initial;  
+    }
+    
+    .header-content{
+    flex-direction:column;
+    padding: 180px 30px 30px 30px;
+    }
+    
+    .header-1{
+      width:100%;
+      align-items: center;
+    }
+    
+    .header-2{
+    width:100%;
+    text-align: center;
+    }
+    
+    .lives{
+      padding: 0px;
+    }
+    
+    .footer{
+      margin-top:30px;
+      padding: 30px;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer ul{
+      margin-top: 15px;
+      justify-content: center;
+    }
+    
+}
+/* Estilos CSS para los contenedores */
+.box-1 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+
+
+ /* Agregamos estilos para el reproductor de video */
+ .video-player {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los botones y el espacio de comentarios */
+        .video-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-subscribe,
+        .btn-like,
+        .btn-follow,
+        .btn-donate {
+            padding: 10px 20px;
+            background-color: #e398e9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .comment-section textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .comment-section .btn-comment {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 767px) {
+            .video-controls {
+                flex-direction: column;
+            }
+
+            .comment-section textarea {
+                height: 80px;
+            }
+        }
+
+        .notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.notification-content {
+  flex-grow: 1;
+}
+
+.notification-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.close-btn {
+  background-color: #ac83c0;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+    </style>
+   
+  </head>
+  <body>
+   
+    <header class="header">
+        <div class="nave container">
+            <a href="#" class="logo">XERATH</a>
+            <input type="checkbox" id="nave"/>
+            <label for="nave">
+                <img src="../assets/images/logo.png" class="nave-icono" alt="nave">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/services">Buscar</a></li>
+                    <li><a href="/testimonials">Notificaciones</a></li>
+                    <li><a href="/pricing">Perfil</a></li>
+                   
+                </ul>
+            </nav>
+            <a href="/header" class="btn-1">Cerrar Sesion </a>
+            
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-1">
+                <img src="jpg/bg.png" alt="">
+                <a href="/clients" class="btn-2">Live</a>
+            </div>
+            <div class="header-2">
+                <h1>Texto <br> texto </h1>
+                <img src="jpg/play.png" alt="">
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="notification-container">
+        <div class="notification">
+          <img src="../assets/images/4.jpg" alt="Imagen de la notificación">
+          <div class="notification-content">
+            <p>El canal Streaming01 ha comenzado un live</p>
+            <button class="close-btn">Cerrar</button>
+          </div>
+        </div>
+      </div>
+      
+
+    <section class="lives container">
+        <h2> 
+          Looking for new channel?
+        </h2>
+        <hr>
+
+        <div class="box-container-9">
+
+            <div class="box-9">
+                <div class="content">
+                     <img src="../assets/images/12.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div>    
+
+            <div class="box-9">
+                <div class="content">
+                     <img src="../assets/images/11.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div> 
+
+            <div class="box-9">
+                <div class="content">
+                    <img src="../assets/images/10.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div>    
+
+            <div class="box-9">
+                <div class="content">
+                     <img src="../assets/images/9.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div> 
+
+            <div class="box-9">
+                <div class="content">
+                    <img src="../assets/images/8.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div>    
+
+            <div class="box-9">
+                <div class="content">
+                    <img src="../assets/images/7.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div> 
+
+            <div class="box-9">
+                <div class="content">
+                    <img src="../assets/images/6.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Texto</p>
+                </div>
+            </div>    
+
+            <div class="box-9">
+                <div class="content">
+                     <img src="../assets/images/5.jpg" alt="">
+                    <h3>Lives</h3>  
+                    <p>Félix Lengyel is the French-Canadian streamer you will see online most of the time. </p>
+                </div>
+            </div> 
+
+            <div class="box-9">
+                <div class="content">
+                     <img src="../assets/images/4.jpg" alt="">
+                    <h3>Shroud</h3>  
+                    <p>Michael Grzesiek has a Polish-sounding name because he is half Polish and half Canadian. </p>
+                </div>
+            </div>    
+
+            <div class="box-9">
+                <div class="content">
+                     <img src="../assets/images/3.jpg" alt="">
+                    <h3>TheGrefg</h3>  
+                    <p>His interest in games sparked around the time most of us got into games</p>
+                </div>
+            </div> 
+            
+             <div class="box-9">
+                <div class="content">
+                    <img src="../assets/images/2.jpg" alt="">
+                    <h3>Pokimane</h3>  
+                    <p>Texto</p>
+                </div>
+            </div>    
+
+            <div class="box-9">
+                <div class="content">
+                    <img src="../assets/images/1.jpg" alt="">
+                    <h3>Sodapoppin</h3>  
+                    <p>Texto</p>
+                </div>
+            </div> 
+
+        </div>
+
+        <div class="load-more" id="load-more-9">Cargar mas</div>
+        
+    </section>
+
+    <!-- Script para cargar dinámicamente los contenedores -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var url = "https://tu-servidor/api/canales"; // Reemplaza esto con la URL de tu API que devuelve los canales de transmisión
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            var boxContainer = document.getElementById("box-container");
+
+            data.forEach(function(canal) {
+                var box = document.createElement("div");
+                box.classList.add("box-1");
+
+                var content = document.createElement("div");
+                content.classList.add("content");
+
+                var img = document.createElement("img");
+                img.src = "url-de-la-imagen"; // Reemplaza esto con la URL de la imagen del canal
+                img.alt = "Miniatura del canal";
+
+                var h3 = document.createElement("h3");
+                h3.textContent = canal.nombreCanal;
+
+                var p = document.createElement("p");
+                p.textContent = canal.descripcionCanal;
+
+                content.appendChild(img);
+                content.appendChild(h3);
+                content.appendChild(p);
+
+                box.appendChild(content);
+                boxContainer.appendChild(box);
+
+                box.addEventListener("click", function() {
+                    console.log("Detalles del canal", canal.nombreCanal);
+                    // Aquí podrías redirigir a la página del canal o mostrar más detalles
+                });
+            });
+        })
+        .catch(error => {
+            console.error("Error al obtener los datos de los canales:", error);
+        });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+        // Obtener el botón "Live"
+        var liveButton = document.querySelector(".btn-2");
+        // Obtener el contenedor de "Lives"
+        var livesContainer = document.getElementById("lives-container");
+
+        // Agregar un evento de clic al botón "Live"
+        liveButton.addEventListener("click", function() {
+            // Ocultar el contenedor de "Lives" cuando se hace clic en el botón "Live"
+            livesContainer.style.display = "none";
+        });
+    });
+    </script>
+
+
+
+   
+
+    <footer class="footer container">
+        <h3>XERATH</h3>
+
+        <ul>
+            <li><a href="#">Buscar</a></li>
+            <li><a href="#">Notificaciones</a></li>
+            <li><a href="#">Perfil</a></li>
+        </ul>
+        
+    </footer>
+
+    
+
+  </body>
+</html>

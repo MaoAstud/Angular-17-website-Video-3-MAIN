@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of alanisbarba</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Bebas Neue', cursive;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url('../assets/images/0.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .nave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 35px;
+            color: #bea0d8;
+        }
+
+        .nave .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+        }
+
+        .nave .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nave .navbar ul li {
+            position: relative;
+            float: left;
+        }
+
+        .nave .navbar ul li a {
+            font-size: 22px;
+            padding: 20px;
+            color: #7a7777;
+            display: block;
+        }
+
+        .nave .navbar ul li a:hover {
+            color: #9c2bcd;
+        }
+
+        #nave {
+            display: none;
+        }
+
+        .nave-icono {
+            width: 25px;
+        }
+
+        .nave label {
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .header-content {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-1 img {
+            width: 300px;
+        }
+
+        .header-2 {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .header-2 h1 {
+            color: #ffffff72;
+            font-size: 80px;
+            line-height: 80px;
+        }
+
+        .header-2 img {
+            width: 70px;
+        }
+
+        .btn-1 {
+            display: inline-block;
+            padding: 7px 20px;
+            background-color: #e398e9;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .btn-2 {
+            width: 110px;
+            display: inline-block;
+            padding: 7px 20px;
+            background-color: #c87fd1;
+            color: #fff;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .lives {
+            padding: 50px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 1px solid #c172e4;
+            width: 50%;
+            margin-bottom: 40px;
+        }
+
+        /* Estilos para el reproductor de video */
+        .video-player {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los botones y el espacio de comentarios */
+        .video-controls,
+        .comment-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .btn-subscribe,
+        .btn-like,
+        .btn-follow,
+        .btn-donate {
+            padding: 10px 20px;
+            background-color: #e398e9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .comment-section textarea {
+            width: calc(100% - 120px);
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .comment-section .btn-comment {
+            padding: 10px 20px;
+            background-color: #cc96e4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 767px) {
+            .video-controls,
+            .comment-section {
+                flex-direction: column;
+            }
+
+            .comment-section textarea {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<section class="lives container">
+    <h2>Miraculous Ladybug Temporada 5- Recreacion (El dia final parte2) -Español Latino</h2>
+    <hr>
+
+    <div class="video-player">
+        <!-- Aquí puedes insertar el reproductor de video -->
+        <video controls>
+            <source src="../assets/images/video.mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+    <div class="video-controls">
+        <!-- Botones de suscripción, like, seguir, donar -->
+        <button class="btn-subscribe">Suscribirse</button>
+        <button class="btn-like">Me gusta</button>
+        <button class="btn-follow">Seguir</button>
+        <button class="btn-donate">Donar</button>
+    </div>
+
+    <div class="comment-section">
+        <!-- Espacio para comentarios -->
+        <textarea placeholder="Escribe un comentario"></textarea>
+        <button class="btn-comment">Comentar</button>
+    </div>
+</section>
+
+<footer class="footer container">
+    <h3>XERATH</h3>
+
+    
+</footer>
+
+</body>
+</html>
