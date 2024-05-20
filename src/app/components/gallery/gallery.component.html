@@ -177,8 +177,8 @@
 
  
 <!-- gallery.component.html -->
-<div class="wrapper">
-  <form [formGroup]="registrationForm" (submit)="submitForm()">
+<div class="wrapper" >
+  <form [formGroup]="registrationForm" (submit)="submitRegisterForm()" [hidden]="!showRegister">
     <h1>Register</h1>
     <div class="input-box">
       <input type="text" placeholder="Username" formControlName="username">
@@ -218,7 +218,7 @@
     </div>
     
 
-    <button type="submit" class="btn">Register</button>
+    <button type="submit" class="btn" (submit)="submitRegisterForm()">Register</button>
 
     
     
@@ -227,7 +227,7 @@
      
     <!-- Enlace para cambiar entre Registro e Inicio de Sesión -->
     <div class="register-link">
-      <p id="register-section-link" (click)="showLoginFields = true">Already have an account? <a href="#">Login</a></p>
+      <p id="register-section-link" (click)="showLogin()">Already have an account? <a>Login</a></p>
     </div>
     
   </form>
@@ -245,7 +245,7 @@
       <i class='bx bxs-lock-alt'></i>
     </div>
 
-    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn" (onclick)="submitLoginForm()">Login</button>
   </form>
 
 </div>
